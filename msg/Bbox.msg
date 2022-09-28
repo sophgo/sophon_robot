@@ -1,0 +1,9 @@
+uint32 frame_id
+uint32 object_id 
+int32  track_id
+string object_name
+float32  left_top_x
+float32  left_top_y
+float32  width
+float32  height
+float32  conf
