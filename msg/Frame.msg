@@ -1,0 +1,3 @@
+uint32 frame_id
+sensor_msgs/CompressedImage img
+Bboxes bboxes

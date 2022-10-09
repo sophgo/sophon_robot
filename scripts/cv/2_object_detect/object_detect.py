@@ -10,7 +10,7 @@ import time
 import argparse
 from std_msgs.msg import String
 from sensor_msgs.msg import CompressedImage
-from sophon_robot.msg import Bbox,Bboxes
+from sophon_robot.msg import Bbox,Bboxes,Frame
 
 import numpy as np
 from cv_bridge import CvBridge, CvBridgeError
@@ -29,7 +29,7 @@ class Object_Detector(object):
 
         self.image_sub = rospy.Subscriber(self.camera_name+"/image_raw/compressed",CompressedImage,self.callback)
         self.image_pub = rospy.Publisher(self.topic_name+"/compressed",CompressedImage,queue_size=10)
-        self.bboxes_pub = rospy.Publisher(self.topic_name+"/bbox", Bboxes, queue_size = 10)
+        self.bboxes_pub = rospy.Publisher(self.topic_name+"/data", Frame, queue_size = 10)
 
         # init infer engine
         # self.engine = SophonModel.BmodelEngine(bmodel_path, labels_path)
@@ -57,6 +57,7 @@ class Object_Detector(object):
         if res is not None:
             # publish msg
             frame_id, result_dict = res
+            FF = Frame()
             bboxes = Bboxes()
             bboxes.frame_id = frame_id
             bboxes.num_object=len(result_dict) if result_dict is not None else 0
@@ -72,10 +73,13 @@ class Object_Detector(object):
                 box.height = result_dict[i]["det_box"][3]
                 box.conf = result_dict[i]["conf"]
                 bboxes.bboxes.append(box)
+            FF.frame_id = frame_id
+            FF.img = data
+            FF.bboxes = bboxes
+
         try:
             self.image_pub.publish(self.bridge.cv2_to_compressed_imgmsg(res_frame))
-            if res is not None:
-                self.bboxes_pub.publish(bboxes)
+            self.bboxes_pub.publish(FF)
         except CvBridgeError as e:
             print(e)
 
