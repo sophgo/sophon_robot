@@ -201,7 +201,7 @@ class YOLOV5_Detector(object):
                 left), round(top), round(right), round(bottom))
         print("draw time: {}".format(time.time()-t4))
 
-        return result_image
+        return result_image, None
 
 
     def drawPred(self, frame, classId, conf, left, top, right, bottom):
