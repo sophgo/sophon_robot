@@ -279,7 +279,7 @@ class YOLOV5_BMCV_Detector(object):
 
                 result_image = self.drawPred(frame, classIds[i], confidences[i], round(
                     left), round(top), round(right), round(bottom))
-            return result_image
+            return result_image, None
 
 
     def postprocess_np(self, outs, max_wh=7680):
