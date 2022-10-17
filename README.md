@@ -47,4 +47,4 @@ sudo chmod +x /data/workspace/robot_ws/src/sophon_robot/scripts/cv/*
 安装完sophon_robot包之后，要运行基于摄像头的相关demo，首先需要安装usb_cam包，[点击这里，跳转到安装usb_cam包](https://github.com/sophgo/sophon_robot/tree/main/scripts/cv#readme)
 
 ## 0 传统的图像处理
-传统的图像处理包括灰度图变换，边缘检测，颜色变换，脸检测，动作检测，视觉巡线，角点检测，相机参数矫正，[点击这里，跳转到传统的图像处理](https://github.com/sophgo/sophon_robot/tree/main/scripts/cv/1_opencv_basic#readme)
+传统的图像处理包括灰度图变换，边缘检测，颜色检测，人脸检测，动作检测，视觉巡线，角点检测，相机参数矫正，[点击这里，跳转到传统的图像处理](https://github.com/sophgo/sophon_robot/tree/main/scripts/cv/1_opencv_basic#readme)
