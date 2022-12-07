@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find astra_camera)/launch/astra.launch"/>
+	<node name="img_compressed_show" pkg="sophon_robot" type="compressed_image_topic.py" output="screen">
+		<param name="camera_name" value="camera" />
+	</node>
+  	<node pkg="tf" type="static_transform_publisher" name="base_link_to_camera" args ="0 0.0 0.15 0 0.0 0.0 /base_footprint /camera_link 20" />
+</launch>

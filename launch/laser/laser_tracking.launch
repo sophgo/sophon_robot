@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<include file="$(find sophon_robot)/launch/kt001_1.launch"  />
+
+	<include file="$(find sophon_robot)/launch/laser/lidar.launch"  />
+	
+	<node name="laser_tracking" pkg="sophon_robot" type="laser_tracking.py" output="screen" />
+
+</launch>

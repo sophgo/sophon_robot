@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="map_type" default="gmapping" doc="opt: gmapping"/>
+
+  <include file="$(find sophon_robot)/launch/kt001_1.launch" />
+
+  <include file="$(find sophon_robot)/launch/laser/lidar.launch" />
+
+  <include file="$(find sophon_robot)/launch/cv/camera.launch" />
+
+  <include file="$(find sophon_robot)/launch/slam/$(arg map_type).launch" />
+
+</launch>

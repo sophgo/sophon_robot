@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+        <include file="$(find sophon_robot)/launch/kt001_1.launch" />
+
+	<include file="$(find sophon_robot)/launch/laser/lidar.launch" />
+
+	<include file="$(find sophon_robot)/launch/cv/camera.launch" />
+
+        <!-- Start the map server function pack and publish the map -->
+        <arg name="map_file" default="$(find sophon_robot)/maps/mymap.yaml"/>
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+        <!--Start AMCL Adaptive Monte Carlo positioning algorithm package -->
+	<include file="$(find sophon_robot)/launch/nav/amcl.launch" />
+
+        <!-- Start path planning algorithm package -->
+	<include file="$(find sophon_robot)/launch/nav/move_base.launch"/>
+
+</launch>
+

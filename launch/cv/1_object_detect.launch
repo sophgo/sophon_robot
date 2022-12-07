@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="object_detect" pkg="sophon_robot" type="object_detect.py" output="screen">
+                <param name="camera_name" value="camera" />
+		<param name="bmodel" value="/home/linaro/robot_ws/src/sophon_robot/data/cv/2_object_detect/yolov5s_480x640_v6.1_1output_int8_1b.bmodel"/>
+		<param name="label" value="/home/linaro/robot_ws/src/sophon_robot/data/cv/2_object_detect/coco_labels.txt" />
+        </node>
+
+</launch>

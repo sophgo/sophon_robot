@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<include file="$(find sophon_robot)/launch/kt001.launch"  />
+	
+	<node name="tele_key" pkg="sophon_robot" type="teleop_key.py" output="screen" />
+
+</launch>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="grey_convert" pkg="sophon_robot" type="color_convert.py" output="screen">
+	    <param name="camera_name" value="camera" />
+	</node>
+
+</launch>

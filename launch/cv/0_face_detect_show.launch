@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="motion_detect" pkg="sophon_robot" type="face_detect.py" output="screen">
+		<param name="camera_name" value="camera" />
+		<param name="file_name" value="/home/linaro/robot_ws/src/sophon_robot/data/cv/1_opencv_basic/haarcascade_frontalface_alt.xml" />
+        </node>
+
+</launch>

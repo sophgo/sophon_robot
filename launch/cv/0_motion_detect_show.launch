@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="motion_detect" pkg="sophon_robot" type="motion_detect.py" output="screen">
+            <param name="camera_name" value="camera" />
+        </node>
+
+</launch>
+

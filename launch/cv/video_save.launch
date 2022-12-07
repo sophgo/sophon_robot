@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<include file="$(find astra_camera)/launch/astra.launch"  />
+	
+	<node name="video_save" pkg="sophon_robot" type="save_video.py" output="screen" />
+
+</launch>

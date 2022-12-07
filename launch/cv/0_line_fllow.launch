@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find sophon_robot)/launch/kt001_1.launch" />
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="line_follow" pkg="sophon_robot" type="line_follow.py" output="screen">
+                <param name="camera_name" value="camera" />
+        </node>
+
+</launch>

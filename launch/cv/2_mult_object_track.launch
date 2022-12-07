@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+       
+	<include file="$(find sophon_robot)/launch/cv/1_object_detect.launch" />
+
+	<node name="object_track" pkg="sophon_robot" type="object_tracker_node.py" output="screen"/>	
+
+</launch>
