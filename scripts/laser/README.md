@@ -16,7 +16,7 @@ rosrun rqt_reconfigure rqt_reconfigure
 ```
 laserAngle：机器人前面探测的角度  
 distance：机器人可以探测的距离  
-<img src="./pic/filter_conf.png" width="70%"/>
+<img src="https://github.com/sophgo/sophon_robot/tree/main/scripts/laser/pic/filter_conf.png" width="70%"/>
 
 ### 1.1 具体代码实现以及注释
 ```bash
