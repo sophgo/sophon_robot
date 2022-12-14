@@ -1,4 +1,4 @@
-环境配置及远程连接请参考前面的课程：配置KT001开发环境
+
 ## 1 雷达数据过滤
 在机器人端输入以下命令启动雷达数据过滤节点
 ```
@@ -8,7 +8,7 @@ roslaunch sophon_robot laser_filter.launch
 ```
 rosrun rviz rviz
 ```
-<img src="./pic/filter_view.png" width="70%"/>
+<img src="pic/filter_view.png" width="70%"/>
 
 在虚拟机启动动态参数调节界面
 ```
