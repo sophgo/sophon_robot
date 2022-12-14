@@ -48,3 +48,6 @@ sudo chmod +x /data/workspace/robot_ws/src/sophon_robot/scripts/cv/*
 
 ## 0 传统的图像处理
 传统的图像处理包括灰度图变换，边缘检测，颜色检测，人脸检测，动作检测，视觉巡线，角点检测，相机参数矫正，[点击这里，跳转到传统的图像处理](https://github.com/sophgo/sophon_robot/tree/main/scripts/cv/1_opencv_basic#readme)
+
+## 1 雷达的基本应用
+雷达的基本应用包括雷达数据过滤，雷达避障，雷达警戒，雷达追踪，[点击这里，跳转到传统的图像处理]
