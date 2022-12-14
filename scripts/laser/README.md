@@ -8,7 +8,7 @@ roslaunch sophon_robot laser_filter.launch
 ```
 rosrun rviz rviz
 ```
-<img src="pic/filter_view.png" width="70%"/>
+<img src="https://github.com/sophgo/sophon_robot/tree/main/scripts/laser/pic/filter_view.png" width="70%"/>
 
 在虚拟机启动动态参数调节界面
 ```
