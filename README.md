@@ -51,3 +51,7 @@ sudo chmod +x /data/workspace/robot_ws/src/sophon_robot/scripts/cv/*
 
 ## 1 雷达的基本应用
 雷达的基本应用包括雷达数据过滤，雷达避障，雷达警戒，雷达追踪，[点击这里，跳转到传统的图像处理](https://github.com/sophgo/sophon_robot/blob/main/scripts/laser#readme)
+
+
+## 2 智能车移动控制
+使用键盘远程控制小车移动，[点击这里，跳转到传统的图像处理](https://github.com/sophgo/sophon_robot/blob/main/scripts/ctl#readme)
