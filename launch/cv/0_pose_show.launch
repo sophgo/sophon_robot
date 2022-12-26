@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+        <include file="$(find astra_camera)/launch/astra.launch"  />
+
+        <node name="AR_image" pkg="sophon_robot" type="pose.py" output="screen">
+            <param name="camera_name" value="camera" />
+        </node>
+
+</launch>
+
